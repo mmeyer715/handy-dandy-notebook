@@ -9,6 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.17.3",
+    "install": "^0.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmeyer715/handy-dandy-notebook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmeyer715/handy-dandy-notebook/issues"
+  },
+  "homepage": "https://github.com/mmeyer715/handy-dandy-notebook#readme",
+  "keywords": []
 }
