@@ -34,19 +34,20 @@ app.post('/api/notes', (req, res) => {
     fs.readFile('./db/db.json', (err, results) => {
         if (err) {
             throw err
-        }
-        console.log(JSON.parse(results));
-        const existingNotes = JSON.parse(results);
+        } else {
+            const existingNotes = JSON.parse(results);
+            const allNotes = req.body;
+            existingNotes.push(allNotes);
+            fs.writeFile('./db/db.json', JSON.stringify(existingNotes), (err) => {
+                if (err) {
+                    throw err
+                } else {
+                    res.send('File created!');
+                }
+            });
+        };
     });
-    // fs.writeFile('./db/db.json', JSON.stringify(req.body), (err) => {
-    //     if (err) {
-    //         throw err
-    //     } else {
-    //         res.send('File created!');
-    //     }
-    // });
-    // console.log(req.body);
-})
+});
     // each note should have unique ID when saved
 
 
