@@ -8,6 +8,11 @@
   This is a note keeping application. When first going to the live application, the user is greeted with a clean homepage. When the user clicks "get started", they are directed to an interactive page. Users are able to add notes, go back to pre-existing notes, and delete unwanted notes.
 
 
+
+https://user-images.githubusercontent.com/95265770/164604698-e1129f29-a68f-4772-b2e9-16253b943b8b.mp4
+
+
+
   ## Table of Contents
 
   * [Usage](#usage)
