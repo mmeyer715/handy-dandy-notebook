@@ -3,7 +3,8 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
-// TODO: create server and deploy to heroku
+const PORT = process.env.PORT || 3001
+
 // initiate server
 const app = express();
 
@@ -17,7 +18,6 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
-// TODO: create API routes: 
 // GET /api/notes should read db.json and return all saved notes 
 app.get('/api/notes', (req, res) => {
     fs.readFile('./db/db.json', (err, results) => {
@@ -84,5 +84,5 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // having server listen for requests
 app.listen(3001, () => {
-    console.log(`API server now on port 3001!`)
+    console.log(`API server now on port ${PORT}!`);
 });
