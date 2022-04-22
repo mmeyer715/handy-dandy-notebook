@@ -36,8 +36,10 @@ app.post('/api/notes', (req, res) => {
             throw err
         } else {
             const existingNotes = JSON.parse(results);
-            const allNotes = req.body;
-            existingNotes.push(allNotes);
+            const newNotes = req.body;
+            const noteLength = (existingNotes.length).toString();
+            newNotes.id = noteLength;
+            existingNotes.push(newNotes);
             fs.writeFile('./db/db.json', JSON.stringify(existingNotes), (err) => {
                 if (err) {
                     throw err
