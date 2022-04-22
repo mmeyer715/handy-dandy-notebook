@@ -83,6 +83,6 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 // having server listen for requests
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
